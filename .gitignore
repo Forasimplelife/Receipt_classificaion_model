@@ -1,2 +1,4 @@
 datamodule/__pycache__
 .gitignore
+data
+.gitignore
