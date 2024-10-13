@@ -1,10 +1,24 @@
----
-noteId: "7ac8fd90893111ef8b091fc3e7407ac0"
-tags: []
 
----
+# Image Classification with ResNet (use receipt of supermarket for an example)
+This project implements an image classification model using a ResNet34 architecture. The dataset contains multiple classes, and the model is trained using PyTorch. The code includes data preprocessing, model training, evaluation, and debugging utilities for saving sample images and visualizing training progress.
 
-# ResNet：残差网络在Pytorch中的实现，以超市收据为例
+(日本語)
+
+（中国語）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 性能情况
 | 训练数据集 | 权值文件名称 | 测试数据集 | 精度 |
