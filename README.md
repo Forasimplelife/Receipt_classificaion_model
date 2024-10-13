@@ -10,16 +10,6 @@ This project implements an image classification model using a ResNet34 architect
 
 
 
-
-
-
-
-
-
-
-
-
-
 # 性能情况
 | 训练数据集 | 权值文件名称 | 测试数据集 | 精度 |
 | :---: | :---: | :---: | :---: |
