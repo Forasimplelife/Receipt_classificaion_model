@@ -1,6 +1,6 @@
-datamodule/__pycache__
+
 .gitignore
 data
-.gitignore
 logs
 __pycache__/
+logs/epoch*
