@@ -66,10 +66,10 @@ I use the dataloader to rotated images and preparing other 3 classes, then datas
  <img width="800" height="500" src=figure/3.png/> 
 
 ### 2. training and evaluation
-* [data load and train.ipynb](data load and train.ipynb)  
+* [data_load_train.py](data_load_train.py)  
 
 ### 3. prediction
-[prediction.py](prediction.py)  
+* [prediction.py](prediction.py)  
 
 ### results
 
