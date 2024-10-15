@@ -12,9 +12,6 @@ This project implements an image classification model using a ResNet architectur
 - [Installation](#installation)
 - [Usage](#usage)
 - [Training and Evaluation](#training-and-evaluation)
-- [Utilities](#utilities)
-  - [Debugging Utilities](#debugging-utilities)
-  - [Plotting Utilities](#plotting-utilities)
 - [Results](#results)
 - [Contributing](#contributing)
 - [License](#license)
@@ -29,32 +26,16 @@ This project demonstrates image classification using a deep learning model based
 - **Debugging Tools**: Functions to save and visualize sample images during training.
 - **Plotting Functions**: For visualizing random samples from each class during data exploration.
 
-## **Dataset**
+## **Dataset prepare**
 
 I prepared the two datasets named as train and val
 
- <img width="420" height="300" src=figure/1.png/> 
+ <img width="420" height="200" src=figure/1.png/> 
 
 the image in the foler looks like 
 
- <img width="600" height="300" src=figure/2.png/> 
+ <img width="600" height="600" src=figure/2.png/> 
 
-Then we use the dataloader to rotated images and preparing other 3 classes
-
-The dataset used consists of four classes of images:
-1. Raw images (Class 1)
-2. Rotated images (90° left, Class 2)
-3. Rotated images (180° left, Class 3)
-4. Rotated images (90° right, Class 4)
-
- <img width="800" height="400" src=figure/3.png/> 
-
-### Data Preprocessing
-The data is preprocessed using the following transformations:
-- **Resize**: All images are resized to 224x224 pixels.
-- **Normalization**: Images are normalized to `[0.5, 0.5, 0.5]` for each RGB channel.
-
-The dataset is loaded using the `RotatedReceiptDataset` class, which is defined in the `dataset_module`.
 
 ## **Model Architecture**
 
@@ -63,37 +44,36 @@ This project uses **ResNet34** as the backbone architecture for image classifica
 - **Convolutional Layers**: Used to extract features from images.
 - **Fully Connected Layer**: Used for classification into different categories.
 
-## **Installation**
-
-### Prerequisites
-Ensure you have the following installed:
-- Python 3.x
-- PyTorch
-- Torchvision
-- OpenCV
-- Matplotlib
-
-### Installation Steps
-
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
-    ```
-
-2. **Install Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
 
 ## **Usage**
 
-### 1. Data Preprocessing
-Modify `data_transforms` in `dataset_module` if you need custom transformations. Example:
-```python
-data_transforms = {
-    'train': transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor(), transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])]),
-    'val': transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor(), transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])]),
-}
+### 1.Data Preprocessing
+
+* [dataloader.py](datamodule/dataloader.py)  
+
+The dataset is loaded using the `RotatedReceiptDataset` class, which is defined in the `dataset_module`.
+
+The data is preprocessed using the following transformations:
+- **Resize**: All images are resized to 224x224 pixels.
+- **Normalization**: Images are normalized to `[0.5, 0.5, 0.5]` for each RGB channel.
+
+I use the dataloader to rotated images and preparing other 3 classes, then dataset used consists of four classes of images:
+1. Raw images (Class 1)
+2. Rotated images (90° left, Class 2)
+3. Rotated images (180° left, Class 3)
+4. Rotated images (90° right, Class 4)
+
+ <img width="800" height="800" src=figure/3.png/> 
+
+### 2. training and evaluation
+* [data load and train.ipynb](/data load and train.ipynb)  
+
+### 3. prediction
+[prediction.py](prediction.py)  
+
+### results
 
 
+### Contribution
+
+### 
