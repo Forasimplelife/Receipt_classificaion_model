@@ -31,11 +31,18 @@ This project demonstrates image classification using a deep learning model based
 
 ## **Dataset**
 
+I prepared the two datasets named as train and val
+ <img width="420" height="157" src=figure/1.PNG/> 
+
+Then we use the dataloader to rotated images and preparing other 3 classes
+
 The dataset used consists of four classes of images:
 1. Raw images (Class 1)
 2. Rotated images (90° left, Class 2)
 3. Rotated images (180° left, Class 3)
 4. Rotated images (90° right, Class 4)
+
+ <img width="420" height="157" src=figure/3.PNG/> 
 
 ### Data Preprocessing
 The data is preprocessed using the following transformations:
