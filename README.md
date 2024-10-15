@@ -32,9 +32,9 @@ I prepared the two datasets named as train and val
 
  <img width="420" height="200" src=figure/1.png/> 
 
-the image in the foler looks like 
+Images in the foler look like 
 
- <img width="600" height="600" src=figure/2.png/> 
+ <img width="600" height="400" src=figure/2.png/> 
 
 
 ## **Model Architecture**
@@ -63,10 +63,10 @@ I use the dataloader to rotated images and preparing other 3 classes, then datas
 3. Rotated images (180° left, Class 3)
 4. Rotated images (90° right, Class 4)
 
- <img width="800" height="800" src=figure/3.png/> 
+ <img width="800" height="500" src=figure/3.png/> 
 
 ### 2. training and evaluation
-* [data load and train.ipynb](/data load and train.ipynb)  
+* [data load and train.ipynb](data load and train.ipynb)  
 
 ### 3. prediction
 [prediction.py](prediction.py)  
