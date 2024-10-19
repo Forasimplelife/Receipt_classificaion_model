@@ -12,7 +12,12 @@ class RotatedReceiptDataset(Dataset):
         """
         self.root_dir = root_dir
         self.transform = transform
-        self.image_filenames = os.listdir(self.root_dir)
+        
+        # self.image_filenames = os.listdir(self.root_dir)
+        
+        # Filter out non-image files using _is_image_file method
+        self.image_filenames = [f for f in os.listdir(self.root_dir) if self._is_image_file(f)]
+
 
     def __len__(self):
         # Each image has 4 versions: original, 90°, 180°, and 270° rotations
@@ -40,7 +45,11 @@ class RotatedReceiptDataset(Dataset):
             image = self.transform(image)
 
         return image, rotation_type  # Return the image and its rotation type
-
+    
+    def _is_image_file(self, filename):
+        # Check if the file is an image by its extension
+        valid_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.gif']
+        return any(filename.lower().endswith(ext) for ext in valid_extensions)
 
 # Add the get_data_transforms() function here
 def get_data_transforms(image_size=224):
@@ -64,4 +73,10 @@ def get_data_transforms(image_size=224):
             transforms.ToTensor(),
             transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
         ]),
+         'pre': transforms.Compose([
+            transforms.Resize((image_size, image_size)),
+            transforms.ToTensor(),
+            transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
+        ]),
+        
     }
