@@ -1,20 +1,29 @@
+---
+noteId: "b2d6d9d0b7a011efa16c1fc08364dc64"
+tags: []
 
-# **ResNetを使用した画像分類（スーパーの領収書を例として）**
-本プロジェクトでは、ResNetアーキテクチャを使用した画像分類モデルを実装します。データセットには複数のクラスが含まれており、PyTorchを使用してモデルを訓練します。手順には、データの前処理、モデルの訓練、評価、デバッグ用のユーティリティ（サンプル画像の保存や訓練進捗の可視化）が含まれます。
+---
+
+
+# **Image Classification with ResNet (use receipt of supermarket for an example)**
+This project implements an image classification model using a ResNet architecture. The dataset contains multiple classes, and the model is trained by using PyTorch. The precedure includes data preprocessing, model training, evaluation, and debugging utilities for saving sample images and visualizing training progress.
+
+(日本語)
+（中国語）
 
 ## **Table of Contents**
-- [プロジェクト概要](#プロジェクト概要)
-- [データセット](#データセット)
-- [モデルアーキテクチャー](#デルアーキテクチャー)
-- [インストール](#インストール)
-- [使用方法](#使用方法)
-- [トレーニングと評価](#トレーニングと評価)
-- [結果](#結果)
-- [貢献](#貢献)
-- [ライセンス](#ライセンス)
+- [Project Overview](#project-overview)
+- [Dataset](#dataset)
+- [Model Architecture](#model-architecture)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Training and Evaluation](#training-and-evaluation)
+- [Results](#results)
+- [Contributing](#contributing)
+- [License](#license)
 
 
-## **プロジェクト概要**
+## **Project Overview**
 
 This project demonstrates image classification using a deep learning model based on the **ResNet34** architecture. The key components include:
 
