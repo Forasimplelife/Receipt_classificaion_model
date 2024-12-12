@@ -31,7 +31,7 @@ I prepared the two datasets named as train and val
 
 Images in the foler look like 
 
- <img width="600" height="400" src=figure/2.png/> 
+ <img src=figure/2.png/，width="100%"> 
 
 
 ## **Model Architecture**
