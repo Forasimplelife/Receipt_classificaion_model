@@ -16,50 +16,50 @@
 
 ## **プロジェクト概要**
 
+このプロジェクトは、**ResNet34** アーキテクチャに基づいたディープラーニングモデルを使用した画像分類をデモンストレーションするものです。主な構成要素は以下の通りです
 This project demonstrates image classification using a deep learning model based on the **ResNet34** architecture. The key components include:
 
-- **Data Augmentation and Preprocessing**: Transformations applied to input images, including resizing and normalization.
-- **Model Training and Validation**: Includes loss computation, backpropagation, and optimizer updates.
-- **Debugging Tools**: Functions to save and visualize sample images during training.
-- **Plotting Functions**: For visualizing random samples from each class during data exploration.
+**データ拡張と前処理**：入力画像に適用される変換処理（リサイズや正規化など）。
+**モデルのトレーニングと検証** ：損失計算、逆伝播、オプティマイザの更新を含む処理。
+**デバッグツール**：トレーニング中にサンプル画像を保存および可視化する機能。
+**プロット機能**：データ探索中に各クラスからランダムに選んだサンプルを可視化する機能。
 
-## **Dataset prepare**
+## **データセットを準備**
 
-I prepared the two datasets named as train and val
+Train と　Valを二つのフォルダーを作ります。
 
  <img width="420" height="200" src=figure/1.png/> 
 
-Images in the foler look like 
 
 <div align="medium">
   <img src="figure/2.png", width="100%"> 
 </div>
 
-## **Model Architecture**
+## **モデルアーキテクチャー**
 
-This project uses **ResNet34** as the backbone architecture for image classification. Key features of ResNet include:
-- **Residual Blocks**: Allowing the model to train deeper layers by skipping connections.
-- **Convolutional Layers**: Used to extract features from images.
-- **Fully Connected Layer**: Used for classification into different categories.
+このプロジェクトでは、画像分類のバックボーンアーキテクチャとして**ResNet3**4を使用しています。ResNetの主な特徴は以下の通りです：
+**Residual Blocks 残差ブロック**：スキップ接続を活用し、より深い層をトレーニング可能にする。
+**Convolutional Layers 畳み込み層**：画像から特徴を抽出するために使用される。
+**Fully Connected Layer 全結合層**：異なるカテゴリに分類するために使用される。
 
 
-## **Usage**
+## **使用方法**
 
-### 1.Data Preprocessing
+### 1.データ前処理
 
 * [dataloader.py](datamodule/dataloader.py)  
 
-The dataset is loaded using the `RotatedReceiptDataset` class, which is defined in the `dataset_module`.
+このデータセットは、dataset_module内で定義されているRotatedReceiptDatasetクラスを使用して読み込まれます。
 
-The data is preprocessed using the following transformations:
-- **Resize**: All images are resized to 224x224 pixels.
-- **Normalization**: Images are normalized to `[0.5, 0.5, 0.5]` for each RGB channel.
+データは以下の変換処理を用いて前処理されます：
+**Resize リサイズ**：すべての画像を224x224ピクセルにリサイズ。
+**Normalization　正規化**：各RGBチャンネルごとに[0.5, 0.5, 0.5]に正規化。
 
-I use the dataloader to rotated images and preparing other 3 classes, then dataset used consists of four classes of images:
-1. Raw images (Class 1)
-2. Rotated images (90° left, Class 2)
-3. Rotated images (180° left, Class 3)
-4. Rotated images (90° right, Class 4)
+データローダーを使用して回転画像を準備し、以下の4つのクラスで構成されるデータセットを作成します：
+	1.	元の画像（クラス1）
+	2.	左に90°回転した画像（クラス2）
+	3.	左に180°回転した画像（クラス3）
+	4.	右に90°回転した画像（クラス4）
 
  <img width="800" height="500" src=figure/3.png/> 
 
