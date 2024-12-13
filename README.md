@@ -26,7 +26,7 @@ This project demonstrates image classification using a deep learning model based
 
 ## **データセットを準備**
 
-Train と　Valを二つのフォルダーを作ります。
+Train、Val、predictionを三つのフォルダーを作ります。
 
  <img width="420" height="200" src=figure/1.png/> 
 
@@ -56,14 +56,16 @@ Train と　Valを二つのフォルダーを作ります。
 **Normalization　正規化**：各RGBチャンネルごとに[0.5, 0.5, 0.5]に正規化。
 
 データローダーを使用して回転画像を準備し、以下の4つのクラスで構成されるデータセットを作成します：
-	1.	元の画像（クラス1）
-	2.	左に90°回転した画像（クラス2）
-	3.	左に180°回転した画像（クラス3）
-	4.	右に90°回転した画像（クラス4）
+
+1.	元の画像（クラス1）
+2.	左に90°回転した画像（クラス2）
+3.	左に180°回転した画像（クラス3）
+4.	右に90°回転した画像（クラス4）
+
 
  <img width="800" height="500" src=figure/3.png/> 
 
-### 2. training and evaluation
+### 2. トーレニングと評価
 * [data_load_train.py](data_load_train.py)  
 
 ### 3. prediction
