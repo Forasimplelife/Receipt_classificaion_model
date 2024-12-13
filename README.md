@@ -38,8 +38,11 @@ Train、Val、predictionを三つのフォルダーを作ります。
 ## **モデルアーキテクチャー**
 
 このプロジェクトでは、画像分類のバックボーンアーキテクチャとして**ResNet3**4を使用しています。ResNetの主な特徴は以下の通りです：
+
 **Residual Blocks 残差ブロック**：スキップ接続を活用し、より深い層をトレーニング可能にする。
+
 **Convolutional Layers 畳み込み層**：画像から特徴を抽出するために使用される。
+
 **Fully Connected Layer 全結合層**：異なるカテゴリに分類するために使用される。
 
 
@@ -66,14 +69,29 @@ Train、Val、predictionを三つのフォルダーを作ります。
  <img width="800" height="500" src=figure/3.png/> 
 
 ### 2. トーレニングと評価
-* [data_load_train.py](data_load_train.py)  
+* [data_load_train.py](data_load_train.py) を行っています。
+
+深層学習モデルResNet34を使用して、回転されたレシート画像の分類トレーニングと検証を行うことです。
+カスタムデータセットRotatedReceiptDatasetを用いて、トレーニングと検証用データをロードし、データの拡張やサイズ変換（224x224への調整）を適用します。
+PyTorchフレームワークを使用してResNet34モデルを定義し、損失関数として交差エントロピー損失（CrossEntropyLoss）を採用し、Adamオプティマイザでトレーニングを行います。
+
+コードはトレーニングと検証の2つのフェーズに分かれています。トレーニングフェーズでは、複数のイテレーションを通じてモデルの重みを更新し、検証フェーズでは分類精度（test AP）を評価します。また、学習率スケジューラ（例: StepLR）を使用して学習率を動的に調整し、トレーニングの安定性を向上させます。各エポック終了後には、モデルの重みを保存し、将来の推論や利用に備えます。
+
+さらに、ランダムなサンプル情報の表示、データの可視化、デバッグ用の初回バッチ画像の保存などの便利な機能も備えています。この全体的なプロセスは、レシートの回転角度を正確に分類する画像分類タスクに適しています。
+
+<div align="medium">
+  <img src="trainresult.png", width="100%"> 
+</div>
+
 
 ### 3. prediction
-* [prediction.py](prediction.py)  
+* [prediction.py](prediction.py) を使います。
 
-### results
+このコードはResNet34モデルを用いてレシート画像の回転角度を予測し、0°に補正する処理を行います。画像を読み込み、データ変換を適用し、モデルで分類後、結果に基づき画像を回転補正。補正前後の画像を表示します。
 
+<div align="medium">
+  <img src="prediction2.png", width="100%"> 
+</div>
 
-### Contribution
+### Reference
 
-### 
