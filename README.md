@@ -80,7 +80,7 @@ PyTorchフレームワークを使用してResNet34モデルを定義し、損�
 さらに、ランダムなサンプル情報の表示、データの可視化、デバッグ用の初回バッチ画像の保存などの便利な機能も備えています。この全体的なプロセスは、レシートの回転角度を正確に分類する画像分類タスクに適しています。
 
 <div align="medium">
-  <img src="trainresult.png", width="100%"> 
+  <img src="figure/trainresult.png", width="100%"> 
 </div>
 
 
@@ -90,7 +90,7 @@ PyTorchフレームワークを使用してResNet34モデルを定義し、損�
 このコードはResNet34モデルを用いてレシート画像の回転角度を予測し、0°に補正する処理を行います。画像を読み込み、データ変換を適用し、モデルで分類後、結果に基づき画像を回転補正。補正前後の画像を表示します。
 
 <div align="medium">
-  <img src="prediction2.png", width="100%"> 
+  <img src="figure/prediction2.png", width="100%"> 
 </div>
 
 ### Reference
