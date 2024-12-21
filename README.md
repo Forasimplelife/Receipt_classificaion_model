@@ -23,11 +23,11 @@
 
 Train、Val、predictionを三つのフォルダーを作ります。
 
- <img width="200" height="100" src=figure/1.png/> 
+ <img width="420" height="200" src=figure/1.png/> 
 
 
 <div align="medium">
-  <img src="figure/2.png", width="100%"> 
+  <img src="figure/2.png", width="40%"> 
 </div>
 
 ## **モデルアーキテクチャー**
