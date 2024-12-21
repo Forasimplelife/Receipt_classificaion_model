@@ -23,7 +23,7 @@
 
 Train、Val、predictionを三つのフォルダーを作ります。
 
- <img width="420" height="200" src=figure/1.png/> 
+ <img width="200" height="100" src=figure/1.png/> 
 
 
 <div align="medium">
