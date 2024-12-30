@@ -15,13 +15,14 @@
 
 **データ前処理**：[dataloader.py](datamodule/dataloader.py)で入力画像に適用される変換処理（リサイズや正規化など）。
 
-**モデルの学習と推論** ：[data_load_train.py](data_load_train.py) で損失計算、逆伝播、オプティマイザの更新を含む処理。
+**モデルの学習と推論** ：[data_load_train.py](data_load_train.py)で損失計算、逆伝播、オプティマイザの更新を含む処理。
 
-**デバッグツール**：[plot_utils.py](plot_utils.py)トレーニング中にサンプル画像を保存および可視化する機能。
+**デバッグツール**：[plot_utils.py](plot_utils.py)でサンプル画像の可視化する機能。
+
 
 ## **データセットを準備**
 
-Train、Val、Predictionの3つのフォルダを作成し、それぞれにTrain用画像50枚、Val用画像25枚、Prediction用画像3枚を準備します。
+Train、Val、Predictionの3つのフォルダを作成し、それぞれに学習（Train）用画像50枚、検証（Val）用画像25枚、推論/予測（Prediction）用画像3枚を準備します。
 
  <img width="420" height="200" src=figure/1.png/> 
 
