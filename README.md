@@ -90,4 +90,6 @@ Train、Val、Predictionの3つのフォルダを作成し、それぞれに学�
 </div>
 
 ### Reference
+<details><summary> <b>Expand</b> </summary>
 
+* [https://github.com/wangyunjeff/ResNet50-MNIST-pytorch/tree/master](https://github.com/wangyunjeff/ResNet50-MNIST-pytorch/tree/master)
